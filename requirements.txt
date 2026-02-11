@@ -16,3 +16,6 @@ pandas
 
 # UI
 streamlit
+streamlit-webrtc
+av
+ffmpeg-python
