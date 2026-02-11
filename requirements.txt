@@ -1,0 +1,18 @@
+# Core audio
+sounddevice
+soundfile
+numpy
+scipy
+
+# Speech to Text
+torch
+openai-whisper
+
+# Text to Speech
+kokoro
+
+# Data handling
+pandas
+
+# UI
+streamlit
