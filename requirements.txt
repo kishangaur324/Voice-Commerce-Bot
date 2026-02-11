@@ -19,3 +19,4 @@ streamlit
 streamlit-webrtc
 av
 ffmpeg-python
+gTTS
