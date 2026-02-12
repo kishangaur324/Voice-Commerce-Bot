@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
@@ -41,6 +42,7 @@ jobs:
           script: |
             docker stop voice-commerce-bot || true
             docker rm voice-commerce-bot || true
+            docker rmi ${{ secrets.DOCKER_USERNAME }}/voice-commerce-bot:latest
             docker pull ${{ secrets.DOCKER_USERNAME }}/voice-commerce-bot:latest
-            docker run -d -p 8501:8501 --name voice-commerce-bot \
+            docker run -d -p 8501:8501 --rm --name voice-commerce-bot \
               ${{ secrets.DOCKER_USERNAME }}/voice-commerce-bot:latest
